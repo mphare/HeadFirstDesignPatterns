@@ -1,29 +1,46 @@
 package com.whitehare.hsdp.strategy;
 
-abstract public class Duck {
-	protected QuackBehavior quackBehavior;
-	protected FlyBehavior flyBehavior;
+abstract public class Duck
+{
+  protected QuackBehavior quackBehavior;
+  protected FlyBehavior   flyBehavior;
+  protected FootType      footType;
 
-	public void setFlyBehavior(FlyBehavior fb) {
-		flyBehavior = fb;
-	}
+  public void setFootType(FootType ft)
+  {
+    footType = ft;
+  }
 
-	public void setQuackBehavior(QuackBehavior qb) {
-		quackBehavior = qb;
-	}
+  public void setFlyBehavior(FlyBehavior fb)
+  {
+    flyBehavior = fb;
+  }
 
-	public void performQuack() {
-		quackBehavior.quack();
-	}
+  public void setQuackBehavior(QuackBehavior qb)
+  {
+    quackBehavior = qb;
+  }
 
-	public void performFly() {
-		flyBehavior.fly();
-	}
+  public void performQuack()
+  {
+    quackBehavior.quack();
+  }
 
-	public void swim() {
-		System.out.println("All ducks swim");
+  public void performFly()
+  {
+    flyBehavior.fly();
+  }
 
-	}
+  public void performFoot()
+  {
+    footType.foot();
+  }
 
-	abstract public void display();
+  public void swim()
+  {
+    System.out.println("All ducks swim");
+
+  }
+
+  abstract public void display();
 }
