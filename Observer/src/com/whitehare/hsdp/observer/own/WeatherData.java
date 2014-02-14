@@ -35,7 +35,7 @@ public class WeatherData implements Subject
     for (int i = 0; i < observers.size(); i++)
     {
       Observer observer = (Observer) observers.get(i);
-      observer.update(temperature, humidity, pressure);
+      observer.update(temperature, humidity, pressure, heatIndex);
     }
   }
 
