@@ -1,0 +1,2 @@
+observer.jdk - uses the Observable class in the jdk
+observer.own - uses an Observable class written in the code (not using the jdk Observable)
