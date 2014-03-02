@@ -32,6 +32,11 @@ local.properties
 .buildpath
 
 # -----------------
+# Java
+# -----------------
+*.class
+
+# -----------------
 # Package Files
 # -----------------
 *.jar
