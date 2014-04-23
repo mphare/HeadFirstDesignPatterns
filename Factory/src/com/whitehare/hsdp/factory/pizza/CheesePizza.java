@@ -2,7 +2,7 @@ package com.whitehare.hsdp.factory.pizza;
 
 public class CheesePizza extends Pizza
 {
-  CheesePizza()
+  public CheesePizza()
   {
     name = "Cheese Pizza";
   }

@@ -14,7 +14,6 @@ public class WhenBuildingChicagoPizza
     PizzaStore pizzaStore = new ChicagoStylePizzaStore();
     pizzaStore.orderPizza("cheese");
     pizzaStore.orderPizza("pepperoni");
-
+    pizzaStore.orderPizza("veggie");
   }
-
 }
