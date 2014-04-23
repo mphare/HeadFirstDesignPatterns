@@ -4,14 +4,16 @@ import java.util.ArrayList;
 
 public abstract class Pizza
 {
-  protected String name;
-  String           dough;
-  String           sauce;
-  ArrayList        toppings = new ArrayList();
+  protected String    name;
+  protected String    dough;
+  protected String    sauce;
+  protected ArrayList toppings = new ArrayList();
 
   public void prepare()
   {
     System.out.println("Preparing " + name);
+    System.out.println("Dough: " + dough);
+    System.out.println("Sauce: " + sauce);
 
   }
 
@@ -22,11 +24,13 @@ public abstract class Pizza
 
   public void cut()
   {
+    System.out.println("Cutting the pizza into diagonal slices");
 
   }
 
   public void box()
   {
+    System.out.println("Place pizza in official Pizzastore box");
 
   }
 
