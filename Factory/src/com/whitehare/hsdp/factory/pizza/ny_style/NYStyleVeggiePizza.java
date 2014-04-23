@@ -1,8 +1,8 @@
 package com.whitehare.hsdp.factory.pizza.ny_style;
 
-import com.whitehare.hsdp.factory.pizza.Pizza;
+import com.whitehare.hsdp.factory.pizza.VeggiePizza;
 
-public class NYStyleVeggiePizza extends Pizza
+public class NYStyleVeggiePizza extends VeggiePizza
 {
 
 }
