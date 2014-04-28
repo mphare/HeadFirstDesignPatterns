@@ -1,11 +1,21 @@
 package com.whitehare.hsdp.factory.pizza;
 
+import com.whitehare.hsdp.factory.pizza_ingredients.PizzaIngredientsFactory;
+
 public class VeggiePizza extends Pizza
 {
-  public VeggiePizza()
+  PizzaIngredientsFactory ingredientsFactory;
+
+  public VeggiePizza(PizzaIngredientsFactory ingredientsFactory)
   {
-    name = "Veggie Pizza";
-    toppings.add("Black olives");
-    toppings.add("Mushrooms");
+    this.ingredientsFactory = ingredientsFactory;
+  }
+
+  public void prepare()
+  {
+    System.out.println("Preparing " + name);
+    dough = ingredientsFactory.createDough();
+    sauce = ingredientsFactory.createSauce();
+    cheese = ingredientsFactory.createCheese();
   }
 }
