@@ -1,6 +1,6 @@
 package com.whitehare.hsdp.factory.ingredients;
 
-public class Pepperoni
+public class Pepperoni extends Ingredient
 {
 
 }

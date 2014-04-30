@@ -1,6 +1,6 @@
 package com.whitehare.hsdp.factory.ingredients;
 
-public class Dough
+public class Dough extends Ingredient
 {
 
 }

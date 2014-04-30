@@ -13,7 +13,9 @@ public class WhenBuildingNYPizza
   {
     PizzaStore pizzaStore = new NYStylePizzaStore();
     pizzaStore.orderPizza("cheese");
-
+    pizzaStore.orderPizza("clam");
+    pizzaStore.orderPizza("pepperoni");
+    pizzaStore.orderPizza("veggie");
   }
 
 }

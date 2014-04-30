@@ -10,7 +10,7 @@ import com.whitehare.hsdp.factory.ingredients.Veggies;
 public abstract class Pizza
 {
   protected String name;
-  protected Dough  dough;
+  Dough            dough;
   Sauce            sauce;
   Veggies          veggies[];
   Cheese           cheese;

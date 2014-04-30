@@ -1,6 +1,6 @@
 package com.whitehare.hsdp.factory.ingredients;
 
-public class Clams
+public class Clams extends Ingredient
 {
 
 }

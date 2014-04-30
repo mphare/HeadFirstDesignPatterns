@@ -15,5 +15,6 @@ public class WhenBuildingChicagoPizza
     pizzaStore.orderPizza("cheese");
     pizzaStore.orderPizza("pepperoni");
     pizzaStore.orderPizza("veggie");
+    pizzaStore.orderPizza("clam");
   }
 }

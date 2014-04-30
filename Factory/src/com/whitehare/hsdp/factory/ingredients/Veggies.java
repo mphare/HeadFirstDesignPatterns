@@ -1,6 +1,6 @@
 package com.whitehare.hsdp.factory.ingredients;
 
-public class Veggies
+public class Veggies extends Ingredient
 {
 
 }
