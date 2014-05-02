@@ -1,21 +1,25 @@
 package com.whitehare.hsdp.factory.pizza;
 
-import java.util.ArrayList;
+import com.whitehare.hsdp.factory.ingredients.Cheese;
+import com.whitehare.hsdp.factory.ingredients.Chicken;
+import com.whitehare.hsdp.factory.ingredients.Clams;
+import com.whitehare.hsdp.factory.ingredients.Dough;
+import com.whitehare.hsdp.factory.ingredients.Pepperoni;
+import com.whitehare.hsdp.factory.ingredients.Sauce;
+import com.whitehare.hsdp.factory.ingredients.Veggies;
 
 public abstract class Pizza
 {
-  protected String    name;
-  protected String    dough;
-  protected String    sauce;
-  protected ArrayList toppings = new ArrayList();
+  protected String name;
+  Dough            dough;
+  Sauce            sauce;
+  Veggies          veggies[];
+  Cheese           cheese;
+  Pepperoni        pepperoni;
+  Clams            clam;
+  Chicken          chicken;
 
-  public void prepare()
-  {
-    System.out.println("Preparing " + name);
-    System.out.println("Dough: " + dough);
-    System.out.println("Sauce: " + sauce);
-
-  }
+  public abstract void prepare();
 
   public void bake()
   {
@@ -34,9 +38,19 @@ public abstract class Pizza
 
   }
 
+  public void setName(String name)
+  {
+    this.name = name;
+  }
+
   public String getName()
   {
     return name;
   }
 
+  public String toString()
+  {
+    // code to print pizza here
+    return "Not Yet";
+  }
 }
