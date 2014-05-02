@@ -1,6 +1,7 @@
 package com.whitehare.hsdp.factory.pizza_ingredients;
 
 import com.whitehare.hsdp.factory.ingredients.Cheese;
+import com.whitehare.hsdp.factory.ingredients.Chicken;
 import com.whitehare.hsdp.factory.ingredients.Clams;
 import com.whitehare.hsdp.factory.ingredients.Dough;
 import com.whitehare.hsdp.factory.ingredients.FreshClams;
@@ -48,5 +49,12 @@ public class NYPizzaIngredientsFactory implements PizzaIngredientsFactory
   public Clams createClams()
   {
     return new FreshClams();
+  }
+
+  @Override
+  public Chicken createChicken()
+  {
+    // TODO Auto-generated method stub
+    return null;
   }
 }

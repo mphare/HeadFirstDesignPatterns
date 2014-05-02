@@ -1,6 +1,7 @@
 package com.whitehare.hsdp.factory.pizza;
 
 import com.whitehare.hsdp.factory.ingredients.Cheese;
+import com.whitehare.hsdp.factory.ingredients.Chicken;
 import com.whitehare.hsdp.factory.ingredients.Clams;
 import com.whitehare.hsdp.factory.ingredients.Dough;
 import com.whitehare.hsdp.factory.ingredients.Pepperoni;
@@ -16,6 +17,7 @@ public abstract class Pizza
   Cheese           cheese;
   Pepperoni        pepperoni;
   Clams            clam;
+  Chicken          chicken;
 
   public abstract void prepare();
 
