@@ -2,20 +2,20 @@ package com.whitehare.hsdp.factory.pizza.test;
 
 import org.junit.Test;
 
-import com.whitehare.hsdp.factory.pizza.store.CaliforniaPizzaStore;
+import com.whitehare.hsdp.factory.pizza.store.NYStylePizzaStore;
 import com.whitehare.hsdp.factory.pizza.store.PizzaStore;
 
-public class WhenBuildingCaliforniaPizza
+public class WhenNYPizza
 {
 
   @Test
-  public void buildCaliforniaPizza()
+  public void buildNYCheesePizza()
   {
-    PizzaStore pizzaStore = new CaliforniaPizzaStore();
+    PizzaStore pizzaStore = new NYStylePizzaStore();
     pizzaStore.orderPizza("cheese");
+    pizzaStore.orderPizza("clam");
     pizzaStore.orderPizza("pepperoni");
     pizzaStore.orderPizza("veggie");
-    pizzaStore.orderPizza("chicken");
   }
 
 }
