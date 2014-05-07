@@ -1,7 +1,10 @@
 package com.whitehare.hsdp.singleton.chocolate;
 
+import org.apache.log4j.Logger;
+
 public class ChocolateBoiler
 {
+  static Logger                  log4j = Logger.getLogger(ChocolateBoiler.class);
   private static ChocolateBoiler uniqueInstance;
   private boolean                empty;
   private boolean                boiled;
@@ -25,6 +28,7 @@ public class ChocolateBoiler
   {
     if (isEmpty())
     {
+      log4j.debug("Empty, so fill");
       // fill the boiler with milk and chocolate
       empty = false;
       boiled = false;
@@ -35,6 +39,7 @@ public class ChocolateBoiler
   {
     if (!isEmpty() && isBoiled())
     {
+      log4j.debug("Not empty and done, so drain");
       // drain the boiled milk and chocolate
       empty = true;
     }
@@ -45,6 +50,8 @@ public class ChocolateBoiler
   {
     if (!isEmpty() && !isBoiled())
     {
+      log4j.debug("Not empty and not done, so boil");
+
       // bring the contents to a boil
       boiled = true;
     }
