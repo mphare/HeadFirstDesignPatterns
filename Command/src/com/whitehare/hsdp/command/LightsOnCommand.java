@@ -1,11 +1,13 @@
 package com.whitehare.hsdp.command;
 
+import org.apache.log4j.Logger;
+
 import com.whitehare.hsdp.command.items.Light;
 
 public class LightsOnCommand implements Command
 {
-  // static Logger log4j = Logger.getLogger(LightsOnCommand.class);
-  Light light;
+  static Logger logger = Logger.getLogger("com.whitehare.hsdp.command");
+  Light         light;
 
   public LightsOnCommand(Light light)
   {
@@ -14,7 +16,7 @@ public class LightsOnCommand implements Command
 
   public void execute()
   {
-    // log4j.debug("Turning the Light ON");
+    logger.debug("Turning the Light ON");
     light.on();
   }
 
