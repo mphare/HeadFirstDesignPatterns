@@ -4,26 +4,33 @@ import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.whitehare.hsdp.command.CeilingFanHighCommand;
+import com.whitehare.hsdp.command.CeilingFanOffCommand;
 import com.whitehare.hsdp.command.Command;
 import com.whitehare.hsdp.command.GarageDoorOpenCommand;
 import com.whitehare.hsdp.command.LightsOffCommand;
 import com.whitehare.hsdp.command.LightsOnCommand;
 import com.whitehare.hsdp.command.NoCommand;
+import com.whitehare.hsdp.command.items.CeilingFan;
 import com.whitehare.hsdp.command.items.GarageDoor;
 import com.whitehare.hsdp.command.items.Light;
 import com.whitehare.hsdp.command.remote.SimpleRemoteControl;
 
 public class WhenPressingButton
 {
-  static Logger    logger = Logger.getLogger("com.whitehare.hsdp.command");
+  static Logger         logger = Logger.getLogger("com.whitehare.hsdp.command");
 
-  Command[]        onCommands;
-  Command[]        offCommands;
-  Command          undoCommand;
+  Command[]             onCommands;
+  Command[]             offCommands;
+  Command               undoCommand;
 
-  Light            livingRoomLight;
-  LightsOnCommand  livingRoomLightOn;
-  LightsOffCommand livingRoomLightOff;
+  Light                 livingRoomLight;
+  LightsOnCommand       livingRoomLightOn;
+  LightsOffCommand      livingRoomLightOff;
+
+  CeilingFan            ceilingFan;
+  CeilingFanHighCommand ceilingFanHigh;
+  CeilingFanOffCommand  ceilingFanOff;
 
   @Before
   public void initializeTest()
@@ -47,6 +54,12 @@ public class WhenPressingButton
     livingRoomLightOff = new LightsOffCommand(livingRoomLight);
 
     setCommand(0, livingRoomLightOn, livingRoomLightOff);
+
+    ceilingFan = new CeilingFan("Patio");
+    ceilingFanHigh = new CeilingFanHighCommand(ceilingFan);
+    ceilingFanOff = new CeilingFanOffCommand(ceilingFan);
+
+    setCommand(1, ceilingFanHigh, ceilingFanOff);
 
   }
 
@@ -84,6 +97,9 @@ public class WhenPressingButton
   {
     onButtonWasPushed(0);
     offButtonWasPushed(0);
+    undoButtonWasPushed();
+    onButtonWasPushed(1);
+    offButtonWasPushed(1);
     undoButtonWasPushed();
   }
 
