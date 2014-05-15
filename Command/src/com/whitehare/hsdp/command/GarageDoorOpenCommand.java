@@ -20,4 +20,10 @@ public class GarageDoorOpenCommand implements Command
     garageDoor.open();
   }
 
+  public void undo()
+  {
+    // TODO Auto-generated method stub
+
+  }
+
 }
