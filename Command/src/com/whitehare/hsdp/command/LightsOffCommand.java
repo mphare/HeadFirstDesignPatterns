@@ -23,7 +23,7 @@ public class LightsOffCommand implements Command
 
   public void undo()
   {
-    // TODO Auto-generated method stub
+    logger.debug("Undo");
     light.on();
 
   }

@@ -84,6 +84,7 @@ public class WhenPressingButton
   {
     onButtonWasPushed(0);
     offButtonWasPushed(0);
+    undoButtonWasPushed();
   }
 
   @Test
