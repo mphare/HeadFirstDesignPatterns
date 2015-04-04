@@ -1,3 +1,10 @@
+package com.hfdp.adapter.tests;
+import com.hfdp.adapter.birdadapter.TurkeyAdapter;
+import com.hfdp.adapter.birds.Duck;
+import com.hfdp.adapter.birds.MallardDuck;
+import com.hfdp.adapter.birds.Turkey;
+import com.hfdp.adapter.birds.WildTurkey;
+
 public class DuckTestDrive
 {
   public static void main(String[] args)

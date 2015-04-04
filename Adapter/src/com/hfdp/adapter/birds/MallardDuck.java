@@ -1,3 +1,4 @@
+package com.hfdp.adapter.birds;
 public class MallardDuck implements Duck
 {
 

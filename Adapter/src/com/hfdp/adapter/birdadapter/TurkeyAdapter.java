@@ -1,3 +1,7 @@
+package com.hfdp.adapter.birdadapter;
+import com.hfdp.adapter.birds.Duck;
+import com.hfdp.adapter.birds.Turkey;
+
 public class TurkeyAdapter implements Duck
 {
 

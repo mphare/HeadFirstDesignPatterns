@@ -1,3 +1,4 @@
+package com.hfdp.adapter.birds;
 public interface Turkey
 {
 
