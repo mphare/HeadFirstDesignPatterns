@@ -1,25 +1,50 @@
 package com.hfdp.collections;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 public class Waitress
 {
-  PancakeHouseMenu pancakeHouseMenu;
-  DinerMenu        dinerMenu;
+  Menu      pancakeHouseMenu;
+  Menu      dinerMenu;
+  Menu      cafeMenu;
 
-  public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu)
+  ArrayList menus;
+
+  public Waitress(ArrayList menus)
+  {
+    this.menus = menus;
+  }
+
+  public Waitress(Menu pancakeHouseMenu, Menu dinerMenu, Menu cafeMenu)
   {
     this.pancakeHouseMenu = pancakeHouseMenu;
     this.dinerMenu = dinerMenu;
+    this.cafeMenu = cafeMenu;
   }
 
   public void printMenu()
   {
     Iterator pancakeIterator = pancakeHouseMenu.createIterator();
     Iterator dinerIterator = dinerMenu.createIterator();
+    Iterator cafeIterator = cafeMenu.createIterator();
     System.out.println("Breakfast ----");
     printMenu(pancakeIterator);
     System.out.println("Lunch ----");
     printMenu(dinerIterator);
+    System.out.println("Dinner ----");
+    printMenu(cafeIterator);
   }
+
+  // public void printMenu()
+  // {
+  // Iterator menuIterator = menus.iterator();
+  // while (menuIterator.hasNext())
+  // {
+  // Menu menu = (Menu) menuIterator.next();
+  // printMenu(menu.createIterator());
+  // }
+  // }
 
   private void printMenu(Iterator iterator)
   {

@@ -1,6 +1,8 @@
 package com.hfdp.collections;
 
-public class DinerMenu
+import java.util.Iterator;
+
+public class DinerMenu implements Menu
 {
   static final int MAX_ITEMS     = 5;
   int              numberOfItems = 0;
@@ -30,13 +32,15 @@ public class DinerMenu
     }
   }
 
+  @Override
+  public Iterator createIterator()
+  {
+    return new DinerMenuIterator(menuItems);
+  }
+
   // public MenuItem[] getMenuItems()
   // {
   // return menuItems;
   // }
 
-  public Iterator createIterator()
-  {
-    return new DinerMenuIterator(menuItems);
-  }
 }
