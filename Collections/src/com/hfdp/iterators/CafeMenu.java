@@ -1,4 +1,4 @@
-package com.hfdp.collections;
+package com.hfdp.iterators;
 
 import java.util.Hashtable;
 import java.util.Iterator;

@@ -1,4 +1,4 @@
-package com.hfdp.collections;
+package com.hfdp.iterators;
 
 public class MenuItem
 {

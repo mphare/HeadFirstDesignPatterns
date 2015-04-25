@@ -1,11 +1,11 @@
-package com.hfdp.collections.test;
+package com.hfdp.iterators.test;
 
 import org.junit.Test;
 
-import com.hfdp.collections.CafeMenu;
-import com.hfdp.collections.DinerMenu;
-import com.hfdp.collections.PancakeHouseMenu;
-import com.hfdp.collections.Waitress;
+import com.hfdp.iterators.CafeMenu;
+import com.hfdp.iterators.DinerMenu;
+import com.hfdp.iterators.PancakeHouseMenu;
+import com.hfdp.iterators.Waitress;
 
 public class WhenTestingWaitressTest
 {
