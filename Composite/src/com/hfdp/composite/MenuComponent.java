@@ -1,7 +1,11 @@
 package com.hfdp.composite;
 
+import java.util.Iterator;
+
 public abstract class MenuComponent
 {
+  Iterator iterator = null;
+
   public void add(MenuComponent menuComponent)
   {
     throw new UnsupportedOperationException();
@@ -35,15 +39,16 @@ public abstract class MenuComponent
 
   }
 
-  public boolean getVegetarian()
-  {
-    throw new UnsupportedOperationException();
-
-  }
-
   public void print()
   {
     throw new UnsupportedOperationException();
-
   }
+
+  public boolean isVegetarian()
+  {
+    throw new UnsupportedOperationException();
+  }
+
+  public abstract Iterator createIterator();
+
 }
