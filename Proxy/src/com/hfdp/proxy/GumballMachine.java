@@ -2,6 +2,7 @@ package com.hfdp.proxy;
 
 public class GumballMachine
 {
+  String location;
 
   public State getSoldOutState()
   {
@@ -44,14 +45,26 @@ public class GumballMachine
   State soldState;
 
   State state = soldOutState;
-  int   count = 0;
 
-  public GumballMachine(int numberOfGumballs)
+  public State getState()
+  {
+    return state;
+  }
+
+  int count = 0;
+
+  public int getCount()
+  {
+    return count;
+  }
+
+  public GumballMachine(String location, int numberOfGumballs)
   {
     soldOutState = new SoldOutState(this);
     noQuarterState = new NoQuarterState(this);
     hasQuarterState = new HasQuarterState(this);
     soldState = new SoldState(this);
+    this.location = location;
     this.count = numberOfGumballs;
     if (numberOfGumballs > 0)
       state = noQuarterState;
@@ -77,6 +90,11 @@ public class GumballMachine
   {
     this.state = state;
 
+  }
+
+  public String getLocation()
+  {
+    return this.location;
   }
 
   void releaseBall()

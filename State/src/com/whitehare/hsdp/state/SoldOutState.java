@@ -2,38 +2,35 @@ package com.whitehare.hsdp.state;
 
 public class SoldOutState implements State
 {
+  GumballMachine gumballMachine;
 
   public SoldOutState(GumballMachine gumballMachine)
   {
-    // TODO Auto-generated constructor stub
+    this.gumballMachine = gumballMachine;
   }
 
   @Override
   public void ejectQuarter()
   {
-    // TODO Auto-generated method stub
-
+    System.out.println("Sorry, we are sold out of gumballs");
   }
 
   @Override
   public void turnCrank()
   {
-    // TODO Auto-generated method stub
-
+    System.out.println("Sorry, we are sold out of gumballs");
   }
 
   @Override
   public void dispence()
   {
-    // TODO Auto-generated method stub
-
+    System.out.println("Sorry, we are sold out of gumballs");
   }
 
   @Override
   public void insertQuarter()
   {
-    // TODO Auto-generated method stub
-
+    System.out.println("Sorry, we are sold out of gumballs");
   }
 
 }

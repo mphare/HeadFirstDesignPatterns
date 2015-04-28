@@ -21,13 +21,15 @@ public class HasQuarterState implements State
   @Override
   public void turnCrank()
   {
+    System.out.println("You turned..");
+    gumballMachine.setState(gumballMachine.getSoldState());
 
   }
 
   @Override
   public void dispence()
   {
-
+    System.out.println("No gumball dispensed");
   }
 
   @Override

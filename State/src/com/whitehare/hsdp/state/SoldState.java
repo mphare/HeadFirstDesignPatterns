@@ -20,22 +20,30 @@ public class SoldState implements State
   @Override
   public void turnCrank()
   {
-    // TODO Auto-generated method stub
+    System.out.println("Turning the crank twice will get you nowhere");
 
   }
 
   @Override
   public void dispence()
   {
-    // TODO Auto-generated method stub
+    gumballMachine.releaseBall();
+    if (gumballMachine.getCount() > 0)
+    {
+      gumballMachine.setState(gumballMachine.getNoQuarterState());
+
+    } else
+    {
+      System.out.println("Oops, out of gumballs");
+      gumballMachine.setState(gumballMachine.getSoldOutState());
+    }
 
   }
 
   @Override
   public void insertQuarter()
   {
-    // TODO Auto-generated method stub
-
+    System.out.println("Please wait, we are already dispensing a gumball");
   }
 
 }

@@ -2,49 +2,19 @@ package com.whitehare.hsdp.state;
 
 public class GumballMachine
 {
-
-  public State getSoldOutState()
-  {
-    return soldOutState;
-  }
-
-  public void setSoldOutState(State soldOutState)
-  {
-    this.soldOutState = soldOutState;
-  }
-
-  public State getNoQuarterState()
-  {
-    return noQuarterState;
-  }
-
-  public void setNoQuarterState(State noQuarterState)
-  {
-    this.noQuarterState = noQuarterState;
-  }
-
-  public State getSoldState()
-  {
-    return soldState;
-  }
-
-  public void setSoldState(State soldState)
-  {
-    this.soldState = soldState;
-  }
-
-  public void setHasQuarterState(State hasQuarterState)
-  {
-    this.hasQuarterState = hasQuarterState;
-  }
-
+  State soldState;
+  State winnerState;
   State soldOutState;
   State noQuarterState;
   State hasQuarterState;
-  State soldState;
 
   State state = soldOutState;
   int   count = 0;
+
+  public int getCount()
+  {
+    return count;
+  }
 
   public GumballMachine(int numberOfGumballs)
   {
@@ -86,16 +56,54 @@ public class GumballMachine
       count = count - 1;
   }
 
-  public Object getHasQuarterState()
+  public State getWinnerState()
   {
-    // TODO Auto-generated method stub
-    return null;
+    return winnerState;
   }
 
-  public void setState(Object hasQuarterState)
+  public void setWinnerState(State winnerState)
   {
-    // TODO Auto-generated method stub
+    this.winnerState = winnerState;
+  }
 
+  public State getHasQuarterState()
+  {
+    return hasQuarterState;
+  }
+
+  public void setHasQuarterState(State hasQuarterState)
+  {
+    this.hasQuarterState = hasQuarterState;
+  }
+
+  public State getSoldOutState()
+  {
+    return soldOutState;
+  }
+
+  public void setSoldOutState(State soldOutState)
+  {
+    this.soldOutState = soldOutState;
+  }
+
+  public State getNoQuarterState()
+  {
+    return noQuarterState;
+  }
+
+  public void setNoQuarterState(State noQuarterState)
+  {
+    this.noQuarterState = noQuarterState;
+  }
+
+  public State getSoldState()
+  {
+    return soldState;
+  }
+
+  public void setSoldState(State soldState)
+  {
+    this.soldState = soldState;
   }
 
 }
