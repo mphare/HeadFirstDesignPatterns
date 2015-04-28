@@ -39,4 +39,10 @@ public class HasQuarterState implements State
 
   }
 
+  @Override
+  public String toString()
+  {
+    return "Have a Quarter";
+  }
+
 }

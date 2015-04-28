@@ -33,4 +33,10 @@ public class SoldOutState implements State
     System.out.println("Sorry, we are sold out of gumballs");
   }
 
+  @Override
+  public String toString()
+  {
+    return "Sold Out";
+  }
+
 }

@@ -37,4 +37,10 @@ public class NoQuarterState implements State
 
   }
 
+  @Override
+  public String toString()
+  {
+    return "Machine is waiting for a quarter";
+  }
+
 }

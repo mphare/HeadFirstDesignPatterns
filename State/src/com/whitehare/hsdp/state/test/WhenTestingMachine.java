@@ -19,6 +19,10 @@ public class WhenTestingMachine
     machine.turnCrank();
     machine.insertQuarter();
     machine.turnCrank();
+    machine.insertQuarter();
+    machine.turnCrank();
+    machine.insertQuarter();
+    machine.turnCrank();
     System.out.println(machine);
   }
 

@@ -2,14 +2,24 @@ package com.whitehare.hsdp.state;
 
 public class GumballMachine
 {
-  State soldState;
-  State winnerState;
-  State soldOutState;
-  State noQuarterState;
-  State hasQuarterState;
+  State        soldState;
+  State        winnerState;
+  State        soldOutState;
+  State        noQuarterState;
+  State        hasQuarterState;
 
-  State state = soldOutState;
-  int   count = 0;
+  State        state       = soldOutState;
+  int          count       = 0;
+  final String company     = "Mighty Gumball, Inc.";
+  final String description = "Java-enabled Standing Gumball Model #2004";
+
+  @Override
+  public String toString()
+  {
+    String d = company + "\n" + description + "\n" + "Inventory " + count + " gumballs" + "\n" + state.toString();
+
+    return (d);
+  }
 
   public int getCount()
   {
