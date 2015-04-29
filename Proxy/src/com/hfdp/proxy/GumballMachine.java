@@ -2,7 +2,100 @@ package com.hfdp.proxy;
 
 public class GumballMachine
 {
-  String location;
+  State        soldState;
+  State        winnerState;
+  State        soldOutState;
+  State        noQuarterState;
+  State        hasQuarterState;
+
+  String       location;
+
+  State        state       = soldOutState;
+  int          count       = 0;
+  final String company     = "Mighty Gumball, Inc.";
+  final String description = "Java-enabled Standing Gumball Model #2004";
+
+  @Override
+  public String toString()
+  {
+    String d = company + " : " + location + "\n" + description + "\n" + "Inventory " + count + " gumballs" + "\n"
+        + state.toString();
+
+    return (d);
+  }
+
+  public int getCount()
+  {
+    return count;
+  }
+
+  public GumballMachine(String location, int numberOfGumballs)
+  {
+
+    soldOutState = new SoldOutState(this);
+    noQuarterState = new NoQuarterState(this);
+    hasQuarterState = new HasQuarterState(this);
+    soldState = new SoldState(this);
+    this.count = numberOfGumballs;
+    this.location = location;
+
+    if (numberOfGumballs > 0)
+      state = noQuarterState;
+  }
+
+  public void insertQuarter()
+  {
+    state.insertQuarter();
+  }
+
+  public void ejectQuarter()
+  {
+    state.ejectQuarter();
+  }
+
+  public void turnCrank()
+  {
+    state.turnCrank();
+    state.dispence();
+  }
+
+  public void setState(State state)
+  {
+    this.state = state;
+
+  }
+
+  public State getState()
+  {
+    return this.state;
+  }
+
+  void releaseBall()
+  {
+    System.out.println("A gumball comes rolling out the slot...");
+    if (count != 0)
+      count = count - 1;
+  }
+
+  public State getWinnerState()
+  {
+    return winnerState;
+  }
+
+  public void setWinnerState(State winnerState)
+  {
+    this.winnerState = winnerState;
+  }
+
+  public State getHasQuarterState()
+  {
+    return hasQuarterState;
+  }
+
+  public void setHasQuarterState(State hasQuarterState)
+  {
+    this.hasQuarterState = hasQuarterState;
+  }
 
   public State getSoldOutState()
   {
@@ -34,86 +127,8 @@ public class GumballMachine
     this.soldState = soldState;
   }
 
-  public void setHasQuarterState(State hasQuarterState)
-  {
-    this.hasQuarterState = hasQuarterState;
-  }
-
-  State soldOutState;
-  State noQuarterState;
-  State hasQuarterState;
-  State soldState;
-
-  State state = soldOutState;
-
-  public State getState()
-  {
-    return state;
-  }
-
-  int count = 0;
-
-  public int getCount()
-  {
-    return count;
-  }
-
-  public GumballMachine(String location, int numberOfGumballs)
-  {
-    soldOutState = new SoldOutState(this);
-    noQuarterState = new NoQuarterState(this);
-    hasQuarterState = new HasQuarterState(this);
-    soldState = new SoldState(this);
-    this.location = location;
-    this.count = numberOfGumballs;
-    if (numberOfGumballs > 0)
-      state = noQuarterState;
-  }
-
-  public void insertQuarter()
-  {
-    state.insertQuarter();
-  }
-
-  public void ejectQuarter()
-  {
-    state.ejectQuarter();
-  }
-
-  public void turnCrank()
-  {
-    state.turnCrank();
-    state.dispence();
-  }
-
-  void setState(State state)
-  {
-    this.state = state;
-
-  }
-
   public String getLocation()
   {
-    return this.location;
+    return location;
   }
-
-  void releaseBall()
-  {
-    System.out.println("A gumball comes rolling out the slot...");
-    if (count != 0)
-      count = count - 1;
-  }
-
-  public Object getHasQuarterState()
-  {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  public void setState(Object hasQuarterState)
-  {
-    // TODO Auto-generated method stub
-
-  }
-
 }

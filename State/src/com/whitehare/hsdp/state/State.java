@@ -1,5 +1,6 @@
 package com.whitehare.hsdp.state;
 
+
 public interface State
 {
 

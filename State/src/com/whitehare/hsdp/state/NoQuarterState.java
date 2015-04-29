@@ -1,5 +1,6 @@
 package com.whitehare.hsdp.state;
 
+
 public class NoQuarterState implements State
 {
   GumballMachine gumballMachine;
@@ -27,7 +28,6 @@ public class NoQuarterState implements State
   public void turnCrank()
   {
     System.out.println("You turned the crank, but have not inserted a quarter");
-
   }
 
   @Override

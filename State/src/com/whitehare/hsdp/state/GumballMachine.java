@@ -53,10 +53,15 @@ public class GumballMachine
     state.dispence();
   }
 
-  void setState(State state)
+  public void setState(State state)
   {
     this.state = state;
 
+  }
+
+  public State getState()
+  {
+    return this.state;
   }
 
   void releaseBall()
