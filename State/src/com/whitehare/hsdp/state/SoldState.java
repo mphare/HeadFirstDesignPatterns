@@ -13,7 +13,7 @@ public class SoldState implements State
   @Override
   public void ejectQuarter()
   {
-    System.out.println("You already turned the crank");
+    System.out.println("Cannot eject the quarter, you've already bought a gumball!");
 
   }
 
@@ -25,7 +25,7 @@ public class SoldState implements State
   }
 
   @Override
-  public void dispence()
+  public void dispense()
   {
     gumballMachine.releaseBall();
     if (gumballMachine.getCount() > 0)

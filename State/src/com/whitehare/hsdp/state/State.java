@@ -1,6 +1,5 @@
 package com.whitehare.hsdp.state;
 
-
 public interface State
 {
 
@@ -8,7 +7,7 @@ public interface State
 
   public void turnCrank();
 
-  public void dispence();
+  public void dispense();
 
   public void insertQuarter();
 

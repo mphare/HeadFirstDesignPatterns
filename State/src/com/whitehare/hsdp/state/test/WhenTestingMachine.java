@@ -27,6 +27,41 @@ public class WhenTestingMachine
   }
 
   @Test
+  public void shouldExerciseWinning()
+  {
+    GumballMachine machine = new GumballMachine(25);
+    System.out.println(machine);
+    machine.insertQuarter();
+    machine.turnCrank();
+    System.out.println(machine);
+    machine.insertQuarter();
+    machine.turnCrank();
+    machine.insertQuarter();
+    machine.turnCrank();
+    machine.insertQuarter();
+    machine.turnCrank();
+    machine.insertQuarter();
+    machine.turnCrank();
+    machine.insertQuarter();
+    machine.turnCrank();
+    machine.insertQuarter();
+    machine.turnCrank();
+    machine.insertQuarter();
+    machine.turnCrank();
+    machine.insertQuarter();
+    machine.turnCrank();
+    machine.insertQuarter();
+    machine.turnCrank();
+    machine.insertQuarter();
+    machine.turnCrank();
+    machine.insertQuarter();
+    machine.turnCrank();
+    machine.insertQuarter();
+    machine.turnCrank();
+    System.out.println(machine);
+  }
+
+  @Test
   public void shouldExerciseSoldOutMachine()
   {
     GumballMachine machine = new GumballMachine(5);

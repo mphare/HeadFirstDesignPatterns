@@ -32,6 +32,7 @@ public class GumballMachine
     noQuarterState = new NoQuarterState(this);
     hasQuarterState = new HasQuarterState(this);
     soldState = new SoldState(this);
+    winnerState = new WinnerState(this);
     this.count = numberOfGumballs;
     if (numberOfGumballs > 0)
       state = noQuarterState;
@@ -50,7 +51,7 @@ public class GumballMachine
   public void turnCrank()
   {
     state.turnCrank();
-    state.dispence();
+    state.dispense();
   }
 
   public void setState(State state)

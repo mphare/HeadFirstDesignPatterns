@@ -13,28 +13,43 @@ public class WinnerState implements State
   @Override
   public void ejectQuarter()
   {
-    // TODO Auto-generated method stub
+    System.out.println("Cannot eject the quarter, you've already bought a gumball!");
 
   }
 
   @Override
   public void turnCrank()
   {
-    // TODO Auto-generated method stub
+    System.out.println("Turning the crank twice will get you nowhere");
 
   }
 
   @Override
-  public void dispence()
+  public void dispense()
   {
-    System.out.println("You're a Winner! You get TWO gumballs for your quarter");
-
+    System.out.println("Winner, Winner, Chicken Dinner! You get TWO gumballs for your quarter");
+    gumballMachine.releaseBall();
+    if (gumballMachine.getCount() == 0)
+    {
+      gumballMachine.setState(gumballMachine.getSoldOutState());
+    } else
+    {
+      gumballMachine.releaseBall();
+      if (gumballMachine.getCount() > 0)
+      {
+        gumballMachine.setState(gumballMachine.getNoQuarterState());
+      } else
+      {
+        System.out.println("Oops, out of gumballs!");
+        gumballMachine.setState(gumballMachine.getSoldOutState());
+      }
+    }
   }
 
   @Override
   public void insertQuarter()
   {
-    // TODO Auto-generated method stub
+    System.out.println("Please wait, we are already dispensing a gumball");
 
   }
 

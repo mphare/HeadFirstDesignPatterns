@@ -1,7 +1,10 @@
 package com.whitehare.hsdp.state;
 
+import java.util.Random;
+
 public class HasQuarterState implements State
 {
+  Random         randomWinner = new Random(System.currentTimeMillis());
 
   GumballMachine gumballMachine;
 
@@ -22,12 +25,20 @@ public class HasQuarterState implements State
   public void turnCrank()
   {
     System.out.println("You turned..");
-    gumballMachine.setState(gumballMachine.getSoldState());
+    int winner = randomWinner.nextInt(10);
+    System.out.println("Winner? :" + winner);
+    if ((winner == 3) && (gumballMachine.getCount() > 1))
+    {
+      gumballMachine.setState(gumballMachine.getWinnerState());
+    } else
+    {
+      gumballMachine.setState(gumballMachine.getSoldState());
+    }
 
   }
 
   @Override
-  public void dispence()
+  public void dispense()
   {
     System.out.println("No gumball dispensed");
   }
