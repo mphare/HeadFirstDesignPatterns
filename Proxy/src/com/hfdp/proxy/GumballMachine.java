@@ -2,24 +2,22 @@ package com.hfdp.proxy;
 
 public class GumballMachine
 {
-  State        soldState;
-  State        winnerState;
-  State        soldOutState;
-  State        noQuarterState;
-  State        hasQuarterState;
+  State          soldState;
+  State          winnerState;
+  State          soldOutState;
+  State          noQuarterState;
+  State          hasQuarterState;
 
-  String       location;
-
-  State        state       = soldOutState;
-  int          count       = 0;
-  final String company     = "Mighty Gumball, Inc.";
-  final String description = "Java-enabled Standing Gumball Model #2004";
+  State          state       = soldOutState;
+  int            count       = 0;
+  final String   company     = "Mighty Gumball, Inc.";
+  final String   description = "Java-enabled Standing Gumball Model #2004";
+  private String location;
 
   @Override
   public String toString()
   {
-    String d = company + " : " + location + "\n" + description + "\n" + "Inventory " + count + " gumballs" + "\n"
-        + state.toString();
+    String d = company + "\n" + description + "\n" + "Inventory " + count + " gumballs" + "\n" + state.toString();
 
     return (d);
   }
@@ -31,14 +29,13 @@ public class GumballMachine
 
   public GumballMachine(String location, int numberOfGumballs)
   {
-
     soldOutState = new SoldOutState(this);
     noQuarterState = new NoQuarterState(this);
     hasQuarterState = new HasQuarterState(this);
     soldState = new SoldState(this);
+    winnerState = new WinnerState(this);
     this.count = numberOfGumballs;
     this.location = location;
-
     if (numberOfGumballs > 0)
       state = noQuarterState;
   }
@@ -56,7 +53,7 @@ public class GumballMachine
   public void turnCrank()
   {
     state.turnCrank();
-    state.dispence();
+    state.dispense();
   }
 
   public void setState(State state)
@@ -129,6 +126,7 @@ public class GumballMachine
 
   public String getLocation()
   {
-    return location;
+    return this.location;
   }
+
 }

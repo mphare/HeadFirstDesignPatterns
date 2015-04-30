@@ -25,7 +25,7 @@ public class SoldState implements State
   }
 
   @Override
-  public void dispence()
+  public void dispense()
   {
     // TODO Auto-generated method stub
 
@@ -38,4 +38,9 @@ public class SoldState implements State
 
   }
 
+  @Override
+  public String toString()
+  {
+    return "Sold a Gumball";
+  }
 }

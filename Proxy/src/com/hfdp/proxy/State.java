@@ -7,7 +7,7 @@ public interface State
 
   public void turnCrank();
 
-  public void dispence();
+  public void dispense();
 
   public void insertQuarter();
 
