@@ -7,13 +7,11 @@
 bin/**
 tmp/**
 tmp/**/*
-**/bin/**
 
 *.tmp
 *.bak
 *.swp
 *~.nib
-*.log
 
 local.properties
 .classpath
@@ -27,6 +25,10 @@ local.properties
 # Eclipse launch config
 .launch
 
+# IntelliJ
+*.iml
+.idea
+
 # CDT specific
 .cproject
 
@@ -36,7 +38,8 @@ local.properties
 # -----------------
 # Java
 # -----------------
-*.class
+*.class 
+
 
 # -----------------
 # Package Files
