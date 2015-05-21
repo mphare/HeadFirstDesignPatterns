@@ -1,9 +1,5 @@
 package com.whitehare.hsdp.command.test;
 
-import org.apache.log4j.Logger;
-import org.junit.Before;
-import org.junit.Test;
-
 import com.whitehare.hsdp.command.CeilingFanHighCommand;
 import com.whitehare.hsdp.command.CeilingFanOffCommand;
 import com.whitehare.hsdp.command.Command;
@@ -16,17 +12,21 @@ import com.whitehare.hsdp.command.items.GarageDoor;
 import com.whitehare.hsdp.command.items.Light;
 import com.whitehare.hsdp.command.remote.SimpleRemoteControl;
 
+import org.apache.log4j.Logger;
+import org.junit.Before;
+import org.junit.Test;
+
 public class WhenPressingButton
 {
-  static Logger         logger = Logger.getLogger("com.whitehare.hsdp.command");
+  static Logger logger = Logger.getLogger("com.whitehare.hsdp.command");
 
-  Command[]             onCommands;
-  Command[]             offCommands;
-  Command               undoCommand;
+  Command[] onCommands;
+  Command[] offCommands;
+  Command   undoCommand;
 
-  Light                 livingRoomLight;
-  LightsOnCommand       livingRoomLightOn;
-  LightsOffCommand      livingRoomLightOff;
+  Light            livingRoomLight;
+  LightsOnCommand  livingRoomLightOn;
+  LightsOffCommand livingRoomLightOff;
 
   CeilingFan            ceilingFan;
   CeilingFanHighCommand ceilingFanHigh;
