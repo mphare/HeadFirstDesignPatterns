@@ -38,6 +38,7 @@ abstract public class Duck
 
   public void swim()
   {
+
     System.out.println("All ducks swim");
 
   }

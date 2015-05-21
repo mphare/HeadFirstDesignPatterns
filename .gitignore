@@ -24,6 +24,11 @@ local.properties
 /src/main.resources.rebal.xml
 .externalToolBuilders/
 
+
+# IntelliJ IDEA
+*.iml
+.idea
+
 # Eclipse launch config
 .launch
 
