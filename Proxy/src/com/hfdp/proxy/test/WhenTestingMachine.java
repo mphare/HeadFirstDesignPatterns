@@ -1,9 +1,9 @@
 package com.hfdp.proxy.test;
 
-import org.junit.Test;
-
 import com.hfdp.proxy.GumballMachine;
 import com.hfdp.proxy.monitor.GumballMonitor;
+
+import org.junit.Test;
 
 public class WhenTestingMachine
 {
