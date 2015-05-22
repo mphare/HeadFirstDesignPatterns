@@ -7,13 +7,12 @@
 bin/**
 tmp/**
 tmp/**/*
-**/bin/**
+out/**
 
 *.tmp
 *.bak
 *.swp
 *~.nib
-*.log
 
 local.properties
 .classpath
@@ -24,8 +23,17 @@ local.properties
 /src/main.resources.rebal.xml
 .externalToolBuilders/
 
+
+# IntelliJ IDEA
+*.iml
+.idea
+
 # Eclipse launch config
 .launch
+
+# IntelliJ
+*.iml
+.idea
 
 # CDT specific
 .cproject
@@ -36,7 +44,8 @@ local.properties
 # -----------------
 # Java
 # -----------------
-*.class
+*.class 
+
 
 # -----------------
 # Package Files

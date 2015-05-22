@@ -1,17 +1,18 @@
-package com.whitehare.hsdp.state;
+package com.hfdp.proxy;
 
 public class GumballMachine
 {
-  State        soldState;
-  State        winnerState;
-  State        soldOutState;
-  State        noQuarterState;
-  State        hasQuarterState;
+  State          soldState;
+  State          winnerState;
+  State          soldOutState;
+  State          noQuarterState;
+  State          hasQuarterState;
 
-  State        state       = soldOutState;
-  int          count       = 0;
-  final String company     = "Mighty Gumball, Inc.";
-  final String description = "Java-enabled Standing Gumball Model #2004";
+  State          state       = soldOutState;
+  int            count       = 0;
+  final String   company     = "Mighty Gumball, Inc.";
+  final String   description = "Java-enabled Standing Gumball Model #2004";
+  private String location;
 
   @Override
   public String toString()
@@ -26,7 +27,7 @@ public class GumballMachine
     return count;
   }
 
-  public GumballMachine(int numberOfGumballs)
+  public GumballMachine(String location, int numberOfGumballs)
   {
     soldOutState = new SoldOutState(this);
     noQuarterState = new NoQuarterState(this);
@@ -34,6 +35,7 @@ public class GumballMachine
     soldState = new SoldState(this);
     winnerState = new WinnerState(this);
     this.count = numberOfGumballs;
+    this.location = location;
     if (numberOfGumballs > 0)
       state = noQuarterState;
   }
@@ -120,6 +122,11 @@ public class GumballMachine
   public void setSoldState(State soldState)
   {
     this.soldState = soldState;
+  }
+
+  public String getLocation()
+  {
+    return this.location;
   }
 
 }

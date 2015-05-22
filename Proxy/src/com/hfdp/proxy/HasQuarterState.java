@@ -1,10 +1,7 @@
-package com.whitehare.hsdp.state;
-
-import java.util.Random;
+package com.hfdp.proxy;
 
 public class HasQuarterState implements State
 {
-  Random         randomWinner = new Random(System.currentTimeMillis());
 
   GumballMachine gumballMachine;
 
@@ -25,15 +22,7 @@ public class HasQuarterState implements State
   public void turnCrank()
   {
     System.out.println("You turned..");
-    int winner = randomWinner.nextInt(10);
-    System.out.println("Winner? :" + winner);
-    if ((winner == 3) && (gumballMachine.getCount() > 1))
-    {
-      gumballMachine.setState(gumballMachine.getWinnerState());
-    } else
-    {
-      gumballMachine.setState(gumballMachine.getSoldState());
-    }
+    gumballMachine.setState(gumballMachine.getSoldState());
 
   }
 

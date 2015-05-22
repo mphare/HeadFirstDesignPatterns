@@ -1,4 +1,4 @@
-package com.whitehare.hsdp.state;
+package com.hfdp.proxy;
 
 public class NoQuarterState implements State
 {
