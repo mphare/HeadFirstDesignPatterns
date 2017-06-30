@@ -19,6 +19,8 @@ local.properties
 .settings
 .loadpath
 
+*.log
+
 # No idea...
 /src/main.resources.rebal.xml
 .externalToolBuilders/

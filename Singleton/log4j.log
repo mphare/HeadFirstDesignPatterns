@@ -1,3 +1,0 @@
-[2015-05-21 13:50:40,421]DEBUG     0[main] - com.whitehare.hsdp.singleton.Singleton.getInstance(Singleton.java:19) - Creating Singleton
-[2015-05-21 13:50:40,425]DEBUG     4[main] - com.whitehare.hsdp.singleton.Singleton.getInstance(Singleton.java:22) - Returning Instance
-[2015-05-21 13:50:40,425]DEBUG     4[main] - com.whitehare.hsdp.singleton.Singleton.getInstance(Singleton.java:22) - Returning Instance
